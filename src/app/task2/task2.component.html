@@ -1,0 +1,11 @@
+<p>task2 works!</p>
+<label>user name :</label>
+<input
+type="text"
+class="form-control"
+[(ngModel)]="userName">
+<p>{{ userName }}</p>
+<button 
+class="btn btn-primary" 
+[disabled]="userName === ''"
+(click)="onButtonClick()">click</button>

@@ -1,0 +1,29 @@
+<h3>I'm in the  ServersComponent!</h3>
+<label>Server Name</label>
+
+<!-- <input 
+type="text" 
+class="form-control" 
+(input)="onUpdateServer($event)">
+<p></p> -->
+<input 
+type="text" 
+class="form-control" 
+[(ngModel)]="serverName">
+
+<p>{{ serverName }}</p>
+<div>
+    <button 
+    class="btn btn-primary" 
+    [disabled]="!isButtonEnable" 
+    (click)="onServerCreation()">Add Server</button>
+</div>
+<!-- <p>{{ serverCreationStatus }}</p> -->
+<p *ngIf="isServerCreated; else noServer">server was created ! Name is {{ serverName }}</p>
+<ng-template #noServer>
+    <p>No server was created</p>
+</ng-template>
+<!-- <p>{{ isButtonEnable }}  by string interpolation</p>
+<p [innerText]="isButtonEnable"></p> -->
+<br>
+<app-server *ngFor="let server of servers"></app-server>
