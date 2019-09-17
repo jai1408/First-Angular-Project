@@ -26,6 +26,6 @@ export class ServerComponent {
   }
 
   constructor(){
-    this.serverStatus = Math.random() > 0.5 ? 'online' : 'offline';
+    this.serverStatus = Math.random() > 0.6 ? 'online' : 'offline';
   }
 }
